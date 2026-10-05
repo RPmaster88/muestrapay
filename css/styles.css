@@ -1,14 +1,14 @@
 :root {
-  --ink: #14181f;
-  --ink-soft: #3d4654;
-  --muted: #6b7280;
-  --line: #e6e2da;
-  --paper: #f7f4ee;
-  --white: #ffffff;
-  --navy: #1c2b4a;
-  --navy-deep: #121c33;
-  --gold: #b08d57;
-  --gold-soft: #f3eadc;
+  --ink: #1c1916;
+  --ink-soft: #3e3a34;
+  --muted: #6f6a62;
+  --line: #e4ddd2;
+  --paper: #f4f0e8;
+  --white: #fffcf8;
+  --navy: #1e3c34;
+  --navy-deep: #122620;
+  --gold: #c9a36b;
+  --gold-soft: #f3e8d8;
   --radius: 18px;
   --shadow: 0 24px 60px rgba(20, 24, 31, 0.12);
   --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
@@ -192,7 +192,7 @@ a {
 
 .btn-gold {
   background: var(--gold);
-  color: #1a140c;
+  color: #1c1916;
 }
 
 .btn-gold:hover {
@@ -220,7 +220,7 @@ a {
 .hero {
   background: var(--navy-deep);
   color: #fff;
-  padding: 3.25rem 0 0;
+  padding: 3.5rem 0 4.5rem;
 }
 
 .hero-grid {
@@ -261,7 +261,7 @@ a {
 .hero h1 em {
   font-style: italic;
   font-weight: 480;
-  color: #f3eadc;
+  color: #f4efe6;
 }
 
 .lede {
@@ -369,19 +369,19 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: 3rem;
-  align-items: end;
+  align-items: center;
 }
 
 .hero-copy {
-  padding-bottom: 3.5rem;
+  padding-bottom: 0;
 }
 
 .film {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  grid-template-rows: 180px 180px;
-  gap: 0.7rem;
-  margin-bottom: -4.5rem;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-rows: 1.2fr 0.8fr;
+  gap: 0.75rem;
+  height: 540px;
 }
 
 .film figure {
@@ -399,6 +399,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .film figcaption {
@@ -517,6 +518,7 @@ a {
   width: 100%;
   height: 460px;
   object-fit: cover;
+  object-position: center;
   border-radius: 24px;
 }
 
@@ -655,7 +657,7 @@ a {
 }
 
 .scenes {
-  padding: 6.5rem 0 0.5rem;
+  padding: 2.75rem 0 0.5rem;
   background: #fff;
 }
 
@@ -668,7 +670,7 @@ a {
 .scene {
   position: relative;
   display: block;
-  height: 156px;
+  height: 240px;
   border-radius: 18px;
   overflow: hidden;
   text-decoration: none;
@@ -678,6 +680,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.45s ease;
 }
 
@@ -821,11 +824,12 @@ a {
 }
 
 .rail img {
-  width: 72px;
-  height: 72px;
+  width: 100%;
+  height: 220px;
   object-fit: cover;
-  border-radius: 16px;
-  margin-bottom: 1rem;
+  object-position: center;
+  border-radius: 18px;
+  margin-bottom: 1.1rem;
 }
 
 .rail span {
@@ -904,7 +908,7 @@ a {
 
 .booking {
   display: grid;
-  grid-template-columns: 132px 1fr;
+  grid-template-columns: 148px 1fr;
   gap: 1rem;
   align-items: center;
   padding: 0.7rem;
@@ -914,9 +918,10 @@ a {
 }
 
 .booking img {
-  width: 132px;
-  height: 96px;
+  width: 148px;
+  height: 112px;
   object-fit: cover;
+  object-position: center;
   border-radius: 12px;
 }
 
@@ -1038,7 +1043,7 @@ a {
 
 /* ——— Footer ——— */
 .site-footer {
-  background: #10151e;
+  background: #101816;
   color: rgba(255, 255, 255, 0.78);
   padding: 3.5rem 0 1.5rem;
 }
@@ -1320,16 +1325,28 @@ body:has(#cookie-banner.is-visible) .site-footer {
   }
 
   .hero-copy {
-    padding-bottom: 1.5rem;
+    padding-bottom: 0;
+  }
+
+  .hero {
+    padding-bottom: 2.75rem;
   }
 
   .film {
-    grid-template-rows: 220px 160px;
-    margin-bottom: -2.5rem;
+    height: auto;
+    grid-template-rows: 280px 190px;
   }
 
   .scenes {
-    padding-top: 4rem;
+    padding-top: 1.75rem;
+  }
+
+  .scene {
+    height: 180px;
+  }
+
+  .rail img {
+    height: 200px;
   }
 
   .rail li,
@@ -1340,7 +1357,12 @@ body:has(#cookie-banner.is-visible) .site-footer {
   }
 
   .booking {
-    grid-template-columns: 108px 1fr;
+    grid-template-columns: 120px 1fr;
+  }
+
+  .booking img {
+    width: 100%;
+    height: 96px;
   }
 
   .about-layout .portrait img {

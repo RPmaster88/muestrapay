@@ -1,4 +1,6 @@
- # Clerkbay (demo site)
+ # PrivateSecre (demo site)
+
+Domain: [privatesecretary.online](https://privatesecretary.online)
 
 Static marketing site in **British English (UK)** for a virtual secretary and concierge — diary, letters and appointments, plus restaurant, hotel and travel bookings.
 

@@ -1,5 +1,5 @@
 /** Google tags — disabled until you add real IDs and set enabled to true */
-window.CLERKBAY_CONFIG = {
+window.PRIVATESECRE_CONFIG = {
   googleAnalytics: {
     enabled: false,
     measurementId: "G-XXXXXXXXXX",

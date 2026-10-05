@@ -8,7 +8,7 @@
     });
   }
 
-  var STORAGE_KEY = "clerkbay_cookie_consent_v1";
+  var STORAGE_KEY = "privatesecre_cookie_consent_v1";
 
   function getConsent() {
     try {
@@ -24,7 +24,7 @@
   }
 
   function loadGoogleTags() {
-    var cfg = window.CLERKBAY_CONFIG || {};
+    var cfg = window.PRIVATESECRE_CONFIG || {};
     if (cfg.googleTagManager && cfg.googleTagManager.enabled && cfg.googleTagManager.containerId) {
       var gtm = cfg.googleTagManager.containerId;
       (function (w, d, s, l, i) {
@@ -94,5 +94,5 @@
     });
   });
 
-  window.CLERKBAY_COOKIES = { reopenBanner: showBanner, getConsent: getConsent };
+  window.PRIVATESECRE_COOKIES = { reopenBanner: showBanner, getConsent: getConsent };
 })();
