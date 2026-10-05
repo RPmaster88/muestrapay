@@ -1,14 +1,14 @@
 :root {
-  --ink: #1c1916;
-  --ink-soft: #3e3a34;
-  --muted: #6f6a62;
-  --line: #e4ddd2;
-  --paper: #f4f0e8;
-  --white: #fffcf8;
-  --navy: #1e3c34;
-  --navy-deep: #122620;
-  --gold: #c9a36b;
-  --gold-soft: #f3e8d8;
+  --ink: #16324a;
+  --ink-soft: #3d5670;
+  --muted: #6a849c;
+  --line: #d3e4f2;
+  --paper: #e7f3fb;
+  --white: #f5faff;
+  --navy: #2a7ab8;
+  --navy-deep: #1d6296;
+  --gold: #3d96d6;
+  --gold-soft: #e3f2fc;
   --radius: 18px;
   --shadow: 0 24px 60px rgba(20, 24, 31, 0.12);
   --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
@@ -55,7 +55,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(245, 250, 254, 0.94);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
 }
@@ -191,8 +191,8 @@ a {
 }
 
 .btn-gold {
-  background: var(--gold);
-  color: #1c1916;
+  background: #5eb6ef;
+  color: #0f2d45;
 }
 
 .btn-gold:hover {
@@ -218,8 +218,8 @@ a {
 
 /* ——— Hero ——— */
 .hero {
-  background: var(--navy-deep);
-  color: #fff;
+  background: linear-gradient(165deg, #d4ecfb 0%, #f5faff 48%, #e5f3fc 100%);
+  color: var(--ink);
   padding: 3.5rem 0 4.5rem;
 }
 
@@ -261,7 +261,7 @@ a {
 .hero h1 em {
   font-style: italic;
   font-weight: 480;
-  color: #f4efe6;
+  color: #1d6eab;
 }
 
 .lede {
@@ -272,11 +272,15 @@ a {
 }
 
 .hero .lede {
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--ink-soft);
 }
 
 .hero .hours {
-  color: rgba(255, 255, 255, 0.62);
+  color: var(--muted);
+}
+
+.hero .call-note-light {
+  color: var(--muted);
 }
 
 .hero-actions {
@@ -360,9 +364,9 @@ a {
 }
 
 .hero .trust-row li {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.16);
-  color: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.72);
+  border-color: #c5dff0;
+  color: var(--ink-soft);
 }
 
 .hero-stage {
@@ -612,7 +616,7 @@ a {
   display: grid;
   place-items: center;
   background: var(--gold-soft);
-  color: #7a5b2e;
+  color: #1d6eab;
 }
 
 /* ——— Collage, scenes, gallery ——— */
@@ -692,7 +696,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 35%, rgba(12, 18, 32, 0.62));
+  background: linear-gradient(180deg, transparent 35%, rgba(18, 58, 96, 0.55));
 }
 
 .scene span {
@@ -1043,7 +1047,7 @@ a {
 
 /* ——— Footer ——— */
 .site-footer {
-  background: #101816;
+  background: #1a5688;
   color: rgba(255, 255, 255, 0.78);
   padding: 3.5rem 0 1.5rem;
 }
@@ -1172,7 +1176,7 @@ body:has(#cookie-banner.is-visible) .site-footer {
 
 .ph {
   background: var(--gold-soft);
-  color: #6b4e24;
+  color: #18527a;
   padding: 0.05em 0.35em;
   border-radius: 4px;
   font-family: ui-monospace, monospace;
