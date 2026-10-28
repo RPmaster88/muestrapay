@@ -31,4 +31,4 @@ Edit `js/config.js`:
 ## Replace placeholders
 
 - Phone: search for `XXXXX` and `tel:XXXXX`.
-- Legal: `legal.html`, `privacy.html`, `cookies.html`, `terms.html`, `service.html`. Highlighted fields in `[square brackets]` still need the real company, ICO and PSA details before launch.
+- Legal: `legal.html`, `privacy.html`, `cookies.html`, `terms.html`, `service.html`. Highlighted fields in `[square brackets]` still need the real company, ICO and Ofcom PRS registration details before launch.

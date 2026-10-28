@@ -23,6 +23,19 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(consent));
   }
 
+  function clearAnalyticsCookies() {
+    var names = document.cookie.split(";");
+    var host = location.hostname;
+    names.forEach(function (part) {
+      var name = part.split("=")[0].trim();
+      if (name.indexOf("_ga") !== 0 && name.indexOf("_gid") !== 0 && name.indexOf("_gat") !== 0) return;
+      var expiry = name + "=; Max-Age=0; path=/";
+      document.cookie = expiry;
+      document.cookie = expiry + "; domain=" + host;
+      document.cookie = expiry + "; domain=." + host;
+    });
+  }
+
   function loadGoogleTags() {
     var cfg = window.PRIVATESECRE_CONFIG || {};
     if (cfg.googleTagManager && cfg.googleTagManager.enabled && cfg.googleTagManager.containerId) {
@@ -81,6 +94,7 @@
     });
     banner.querySelector("[data-cookie-reject]")?.addEventListener("click", function () {
       setConsent({ necessary: true, analytics: false, ts: Date.now() });
+      clearAnalyticsCookies();
       hideBanner();
     });
     banner.querySelector("[data-cookie-manage]")?.addEventListener("click", function () {
@@ -90,6 +104,7 @@
       var analytics = analyticsBox ? analyticsBox.checked : false;
       setConsent({ necessary: true, analytics: analytics, ts: Date.now() });
       if (analytics) loadGoogleTags();
+      else clearAnalyticsCookies();
       hideBanner();
     });
   });
